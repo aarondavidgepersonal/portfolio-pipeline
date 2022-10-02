@@ -40,4 +40,4 @@ jobs:
             echo "Starting script.."
             pwd
             cd /var/www/html
-            
+            git clone https://github.com/aarondavidgepersonal/portfolio-pipeline.git
