@@ -41,4 +41,3 @@ jobs:
             sudo git clone https://github.com/aarondavidgepersonal/portfolio-pipeline.git
             sudo cp -r /var/www/html/portfolio-pipeline/* /var/www/html/
             sudo rm -rf portfolio-pipeline
-            
