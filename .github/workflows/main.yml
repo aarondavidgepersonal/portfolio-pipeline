@@ -6,8 +6,6 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "dev" ]
-  pull_request:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -37,6 +35,9 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            echo "Starting script.."
+            echo "Starting script...."
             pwd
             cd /var/www/html
+            sudo git clone https://github.com/aarondavidgepersonal/portfolio-pipeline.git
+            sudo cp -r /var/www/html/portfolio-pipeline/* /var/www/html/
+            sudo rm -rf portfolio-pipeline

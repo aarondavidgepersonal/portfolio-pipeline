@@ -11,12 +11,10 @@ $mailheader = "From:".$name."<".$email.">\r\n";
 
 $recipient = "aarondavidgejob@gmail.com";
 
-mail($recipient,$subject,$message,$mailheader)
-or die("Error");
-
-echo'Message Sent';
-
-
-
+if(mail($recipient,$subject,$message,$mailheader)){
+    echo 'Your mail has been sent successfully.';
+} else{
+    echo 'Unable to send email. Please try again.';
+}
 
 ?>
