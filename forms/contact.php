@@ -16,7 +16,7 @@ if(mail($recipient,$subject,$message,$mailheader)){
 } else{
     echo 'Unable to send email. Please try again.';
 }
-?>
+
 
 
 
